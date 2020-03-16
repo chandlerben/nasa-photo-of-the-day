@@ -5,7 +5,7 @@ require('dotenv').config();
 
 
 const StyledContainer = styled.div`
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: rgba(22, 22, 26, 1);
     display: flex;
@@ -16,11 +16,13 @@ const StyledContainer = styled.div`
 const StyledPage = styled.div`
     background-color: #aaaaaa;
     width: 50%;
-    padding: 40px 25px 25px;
-    margin: 0 auto;
-    border-radius: 5px;
+    padding: 10px 55px 25px;
+    margin: 10px 20px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 const StyledHeading = styled.h1`
@@ -28,7 +30,14 @@ const StyledHeading = styled.h1`
     font-size:36px;
 `
 const StyledSmallerHeading = styled.h3`
-    color: rgb(252, 248, 215, 1);
+    color: rgb(22, 22, 26, 1);
+    font-size: 16px;
+`
+
+const StyledImageHolder = styled.div`
+    width: "400px";
+    height: "600px";
+    object-fit: cover;
 `
 
 
@@ -55,7 +64,10 @@ function Nasa() {
         <StyledContainer>
             <StyledPage>
                 <StyledHeading>Photo of the Day</StyledHeading>
-                <img src={photo} alt={description} style={{ width: "500px", height: "600px" }} />
+                <StyledImageHolder>
+
+                    <img src={photo} alt={description} style={{ height: "600px", }} />
+                </StyledImageHolder>
                 <StyledSmallerHeading>{description}</StyledSmallerHeading>
             </StyledPage>
         </StyledContainer>
