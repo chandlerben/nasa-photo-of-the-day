@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import { Image, Video, Description } from './components';
 import "./App.css";
+import NASA from './components/NASA'
+
 
 const moment = require('moment');
 
@@ -58,6 +60,7 @@ function App() {
         date={apod.date}
         explanation={apod.explanation}
       />
+
     </div>
   );
 }
