@@ -2,7 +2,7 @@ import React from 'react';
 
 const Video = props => {
     return (
-        <div>
+        <div className="main-div">
             <iframe
                 src={props.url}
                 title={props.title}
